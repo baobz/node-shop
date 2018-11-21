@@ -1,0 +1,35 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+<form>
+  <div>
+    <label>姓名:</label>
+    <input class="username" type="text" name="username">
+  </div>
+  <div>
+    <label>密码:</label>
+    <input class="pwd" type="password" name="pwd">
+  </div>
+  <button class="btn" type="button">提交</button>
+</form>
+
+<script>
+  $('.btn').click(function() {
+    var username = $('.username').val();
+    var pwd = $('.pwd').val();
+
+    $.ajax({
+      type: 'POST',
+      url: '/catalog/login',
+      data: {username: username, pwd: pwd},
+      success: function(res) {
+        console.log(res);
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    })
+  })
+</script>
+
+{{/block}}

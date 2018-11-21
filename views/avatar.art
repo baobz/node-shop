@@ -1,0 +1,34 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+<!-- action="./upload_mult" method="post" enctype="multipart/form-data" -->
+<form action="./upload_mult" method="post" enctype="multipart/form-data">
+  <input type="file" name="avatar" id="avatar" multiple />
+  <button class="btn" id="btn" type="submit">提交</button>
+</form>
+<script>
+  // $('#avatar').change(function() {
+  //   var files = this.files;
+  //   var reader = new FileReader();
+  //   reader.onload = function(event) {
+  //     // console.log(event.target.result);
+  //     $('#base64').val(event.target.result);
+  //   }
+  //   reader.readAsDataURL(files[0]);
+  // })
+
+  // $('#btn').click(function() {
+  //   $.ajax({
+  //     url: 'upload_mult',
+  //     type: 'POST',
+  //     data: { avatar: $('#base64').val() },
+  //     success: function(res) {
+  //       console.log(res);
+  //     },
+  //     error: function(err) {
+  //       console.log(err);
+  //     }
+  //   })
+  // })
+</script>
+{{/block}}

@@ -1,0 +1,5 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+<h1>欢迎您, {{username}}</h1>
+{{block}}

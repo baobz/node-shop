@@ -1,0 +1,10 @@
+{{extend './layout.art'}}
+
+{{block 'content'}}
+
+{{each gallery}}
+{{$index}}
+<img src="{{$value}}">
+{{/each}}
+
+{{/block}}
